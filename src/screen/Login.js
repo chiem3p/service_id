@@ -144,8 +144,8 @@ const styles = StyleSheet.create({
     },
     footerRoot: { flex: 0.2, alignItems: 'center' },
     LogoImage: {
-        width: 350,
-        height: 350,
+        width: 300,
+        height: 315,
     },
 });
 
