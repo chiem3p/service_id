@@ -24,14 +24,16 @@ const HomeTab = createBottomTabNavigator();
 const FacebookStack = createStackNavigator();
 const LikePost = createMaterialTopTabNavigator();
 
+
+
 function LikePostTab() {
   return (
     <LikePost.Navigator>
       <LikePost.Screen name="Like_posts" component={Buff_like_posts} options={{
-        title:'Like Posts'
-      }}/>
+        title: 'Like Posts'
+      }} />
       <LikePost.Screen name="Order History" component={Order_history} options={{
-        title:'History'
+        title: 'History'
       }} />
     </LikePost.Navigator>
   );
@@ -55,7 +57,24 @@ function HomeTabScreen() {
       <HomeTab.Screen
         name="Facebook"
         component={DetailFacebookStack}
-        options={{}}
+        options={{
+          Ionicons: ({ focused, activeTintColor }) =>
+          focused ? (
+            <Ionicons
+              focused={focused}
+              style={{ color: "tomato" }}
+              name="ios-home"
+            />
+          ) : (
+            <Ionicons
+              focused={focused}
+              style={{ color: "gray" }}
+              name="ios-home"
+            />
+          ),
+          
+        }}
+
       />
       <HomeTab.Screen name="Tiktok" component={Tiktok} />
       <HomeTab.Screen name="Instagram" component={Instagram} />
