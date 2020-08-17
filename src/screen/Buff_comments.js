@@ -1,12 +1,13 @@
 //import liraries
 import React, { Component } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet,Button } from 'react-native';
 
 // create a component
 class Buff_comments extends Component {
     render() {
         return (
             <View style={styles.container}>
+                <Button title="Go back" onPress={() => this.props.navigation.goBack()} />
                 <Text>Buff_comments</Text>
             </View>
         );
@@ -19,7 +20,7 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: 'black',
+        backgroundColor: 'yellow',
     },
 });
 
