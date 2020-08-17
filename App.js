@@ -34,18 +34,25 @@ const LikePost = createMaterialTopTabNavigator();
 
 function LikePostTab() {
   return (
-    <LikePost.Navigator>
+    <LikePost.Navigator
+      tabBarOptions={{
+        activeTintColor: 'tomato',
+        inactiveTintColor: 'gray',
+      }}>
       <LikePost.Screen
         name="Like_posts"
         component={Buff_like_posts}
         options={{
           title: "Like Posts",
+
         }}
       />
       <LikePost.Screen
         name="Order History"
         component={Order_history}
+
         options={{
+
           title: "History",
         }}
       />
@@ -84,15 +91,19 @@ function DetailFacebookStack() {
 }
 function HomeTabScreen() {
   return (
-    <HomeTab.Navigator>
+    <HomeTab.Navigator tabBarOptions={{
+      activeTintColor: 'tomato',
+      inactiveTintColor: 'gray',
+    }}>
+
       <HomeTab.Screen
         name="Facebook"
         component={DetailFacebookStack}
         options={{
-          tabBarIcon: ({}) => (
+          tabBarIcon: ({ }) => (
             <Image
               source={{
-                uri: "https://reactnative.dev/img/tiny_logo.png",
+                uri: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/1200px-Facebook_Logo_%282019%29.png",
               }}
               style={{ width: 20, height: 20 }}
             />
@@ -107,31 +118,32 @@ function HomeTabScreen() {
             focused ? (
               <Image
                 source={{
-                  uri: "https://reactnative.dev/img/tiny_logo.png",
+                  uri: "https://purepng.com/public/uploads/large/tik-tok-logo-6fh.png",
                 }}
                 style={{ width: 20, height: 20 }}
               />
             ) : (
-              <Image
-                source={{
-                  uri:
-                    "https://www.talkwalker.com/images/2020/blog-headers/image-analysis.png",
-                }}
-                style={{ width: 20, height: 20 }}
-              />
-            ),
+                <Image
+                  source={{
+                    uri:
+                      "https://www.freepngdesign.com/content/uploads/images/tiktok-6978.png",
+                  }}
+                  style={{ width: 20, height: 20 }}
+                />
+              ),
         }}
       />
       <HomeTab.Screen
         name="Instagram"
         component={Instagram}
         options={{
-          tabBarIcon: ({}) => (
+
+          tabBarIcon: ({ }) => (
             <Image
               source={{
-                uri: "https://reactnative.dev/img/tiny_logo.png",
+                uri: "https://i.pinimg.com/originals/72/a3/d9/72a3d9408d41335f39e9f014dc35cf44.jpg",
               }}
-              style={{ width: 20, height: 20 }}
+              style={{ width: 25, height: 25 }}
             />
           ),
         }}

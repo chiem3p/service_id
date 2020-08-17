@@ -17,7 +17,7 @@ class Facebook extends Component {
                     <Text style={styles.title}>Facebook</Text>
                 </View>
                 <View style={styles.center}>
-                    <ScrollView style={styles.scrollView}>
+                    <ScrollView style={styles.scrollView}   showsVerticalScrollIndicator={false}>
                         <TouchableOpacity
                             style={styles.button}
                             onPress={() => this.props.navigation.navigate('Like_posts')}
@@ -79,7 +79,7 @@ const styles = StyleSheet.create({
         color: "white",
     },
     scrollView: {
-        // alignSelf: "stretch",
+        alignSelf: "stretch",
     },
 
     button: {},
